@@ -1,5 +1,12 @@
 require:
   - rubocop-rails
 
+AllCops:
+  Exclude:
+    - config/**/*.rb
+    - db/**/*.rb
+    - bin/*
+    - Guardfile
+
 Style/Documentation:
   Enabled: false

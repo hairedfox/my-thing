@@ -43,10 +43,20 @@ gem 'rubocop-rails', require: false
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri mingw x64_mingw]
+  gem 'rspec-rails', '~> 5.1.2'
+  gem 'factory_bot_rails'
 end
 
 group :development do
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   gem 'spring'
   gem 'bullet'
+  gem 'guard'
+  gem 'guard-rails', '~> 0.7.2'
+  gem 'guard-rspec', require: false
+  gem 'guard-rubocop'
+end
+
+group :test do
+  gem 'database_cleaner-active_record'
 end
